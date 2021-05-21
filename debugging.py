@@ -6,9 +6,14 @@ def divisors(num):
     return divisors
 
 def run():
-    num = int(input("Write a number: "))
-    print(divisors(num))
-    print("program finish")
+    try:
+        num = int(input("Write a number: "))
+        if num == 0:
+            raise ValueError
+        print(divisors(num))
+        print("program finish")
+    except ValueError:
+        print("Introduce a number diferent from 0 or another number and try again >:V")
 
 
 if __name__ == "__main__":
